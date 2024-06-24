@@ -18,3 +18,4 @@ class Tag extends Model
         return $this->belongsToMany(Grant::class, 'grant_tag');
     }
 }
+    

@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-
 use Illuminate\Database\Seeder;
-use Illuminate\Foundation\Auth\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            TagsTableSeeder::class,
+            GrantsTableSeeder::class,
         ]);
-
-        User::factory(10)->create();
     }
 }
